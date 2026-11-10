@@ -53,12 +53,12 @@ def main():
                 # LÓGICA DE CONTROL DE CALIDAD INDUSTRIAL
                 if nombre_objeto in ["cell phone", "cup", "bottle"]:
                     # Si detecta un objeto cerrado/invasivo -> PIEZA DEFECTUOSA (No Conforme / NG)
-                    estado_inspeccion = "🚨 PIEZA DEFECTUOSA [NG]"
+                    estado_inspeccion = f"🚨 PIEZA DEFECTUOSA [NG] ({precision: .2%})"
                     color_borde = (0, 0, 255) # Rojo 
                     break
                 elif nombre_objeto in ["person", "scissors", "book"]:
                     # Si detecta la mano abierta o superficie limpia -> PIEZA CORRECTA (OK)
-                    estado_inspeccion = "✅ PIEZA CORRECTA [OK]"
+                    estado_inspeccion = f"✅ PIEZA CORRECTA [OK] {(precision: .2%)}"
                     color_borde = (0, 255, 0) # Verde
 
         # Interfaz del Operador (HMI en pantalla)
